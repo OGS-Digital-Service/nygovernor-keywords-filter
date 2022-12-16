@@ -22,10 +22,12 @@
     {% include '_governor.njk' %}
     <title>{{ title }}</title>
   </head>
-  <body class="nysds-normalize">
-  <a href="#skip-to-content" class="sr-only focus:not-sr-only text-blue-700 underline">Skip to Main Content</a>
-    <main class="mx-8 md:mx-20" id="skip-to-content">
+  <body>
+  {% from '../_includes/_components.njk' import unavcurrent, unavcurrentfooter  %}
+  {{  unavcurrent({})}}
+    {% include '_governor-nav.njk' %}
     {{ content | safe }}
-    </main>
+    {% include '_governor-footer.njk' %}
+  {{  unavcurrentfooter({})}}
   </body>
 </html>
