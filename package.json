@@ -1,0 +1,24 @@
+{
+  "name": "nygovernor-keywords-filter",
+  "version": "1.0.0",
+  "description": "keywords views filter for governor.ny.gov",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OGS-Digital-Service/nygovernor-keywords-filter.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OGS-Digital-Service/nygovernor-keywords-filter/issues"
+  },
+  "homepage": "https://github.com/OGS-Digital-Service/nygovernor-keywords-filter#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.2",
+    "pa11y": "^6.2.3"
+  }
+}
