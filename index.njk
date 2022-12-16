@@ -13,9 +13,33 @@ title: Governor Keywords Filter
 </section>
 
 <div class="ny-flex ny-flex-col lg:ny-flex-row">
-    <div class="ny-w-full lg:ny-w-[24%] ny-bg-black ny-p-8">
+    <div class="ny-w-full lg:ny-w-[24%] ny-bg-black ny-p-8 ny-text-white">
         {{keywordfilter({
-
+            filter:[
+                {
+                    name: "filter",
+                    terms: [
+                        {
+                            term: "press release"
+                        },
+                        {
+                            term: "schedule"
+                        },
+                        {
+                            term: "executive order"
+                        },
+                        {
+                            term: "legislation"
+                        }
+                    ]
+                },
+                {
+                    name: "refine"
+                },
+                {
+                    name: "date"
+                }
+            ]
         })  
         }}
     </div>
