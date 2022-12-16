@@ -2,14 +2,24 @@
 layout: layout.njk
 title: Governor Keywords Filter
 ---
-{% from './_includes/_components.njk' import keywordcards  %}
-<div class="">
+{% from './_includes/_components.njk' import keywordcards,keywordheader,keywordfilter  %}
+<div class="ny-flex ny-flex-col">
 
-<section class="">{% include './_includes/_keywords-header.njk' %}</section>
+<section class="ny-bg-ny-blue-second ny-p-10">
+    {{keywordheader({
+            keyword: "Coronavirus"
+        })  
+        }}
+</section>
 
-<div class="">
-    <div class="w-full lg:w-1/3">{% include './_includes/_keywords-filter.njk' %}</div>
-    <div class="">
+<div class="ny-flex ny-flex-col lg:ny-flex-row">
+    <div class="ny-w-full lg:ny-w-[24%] ny-bg-black ny-p-8">
+        {{keywordfilter({
+
+        })  
+        }}
+    </div>
+    <div class="ny-p-8">
         {{keywordcards({
 
         })  
