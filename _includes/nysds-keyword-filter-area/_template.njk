@@ -1,27 +1,41 @@
 <div class="">
     {% for filteritem in params.filter %}
         {% if filteritem.name === "filter" %}
-            <div class="">
-                <h3 class="text-oswald ny-text-ny-gold ny-uppercase ny-text-base ny-mb-6">{{filteritem.name}}</h3>
+            <div class="ny-flex ny-flex-col">
+                <h3 class="text-oswald ny-text-ny-gold ny-uppercase ny-text-base ny-mb-6 ny-tracking-[1px]">{{filteritem.name}}</h3>
             {% for term in filteritem.terms%}
-            <p>{{term.term}}</p>
+            <label class="ny-w-full ny-mb-5 ny-plus">
+                <input type="checkbox" class="ny-filter-input" >
+                {{term.term}}
+                </label>
             {%endfor%}
             </div>
             <hr class="ny-my-8 ny-border-ny-dark last-of-type:ny-hidden">
         {%endif%}
         {% if filteritem.name === "refine" %}
             <div class="">
-                <h3 class="text-oswald ny-text-ny-gold ny-uppercase ny-text-base ny-mb-6">{{filteritem.name}}</h3>
+                <h3 class="text-oswald ny-text-ny-gold ny-uppercase ny-text-base ny-mb-6 ny-tracking-[1px]">{{filteritem.name}}</h3>
                 <i class="fas fa-search ny-absolute ny-text-ny-gold ny-mt-[10px] ny-mx-3" aria-hidden="true"></i> 
                 <label class="sr-only" for="keyword-refine-input">Refine your search by keyword</label>
                 <input type="text" id="keyword-refine-input" placeholder="Keyword(s)" 
-                    class="ny-bg-transparent ny-outline-none ny-border-solid ny-border-ny-dark ny-border ny-rounded-[30px] ny-py-2 ny-pr-8 ny-pl-10 ny-w-full" />
+                    class="ny-bg-transparent ny-outline-none ny-border-solid ny-border-ny-dark ny-border ny-rounded-[30px] ny-py-2 ny-pr-8 ny-pl-10 ny-w-full focus:ny-border-white" />
             </div>
             <hr class="ny-my-8 ny-border-ny-dark last-of-type:ny-hidden">
         {%endif%}
-        {% if filteritem.name === "date" %}
+        {% if filteritem.name === "date range" %}
             <div class="ny-border-b ny-border-solid ny-border-0 last-of-type:ny-border-b-0 ny-border-white">
-                <h3 class="text-oswald ny-text-ny-gold ny-uppercase ny-text-base ny-mb-6">{{filteritem.name}}</h3>
+                <h3 class="text-oswald ny-text-ny-gold ny-uppercase ny-text-base ny-mb-6 ny-tracking-[1px]">{{filteritem.name}}</h3>
+                <div class="ny-flex ny-flex-col">
+                    <label for="start-date-input" class="ny-py-2">From:</label> 
+                    <input id="start-date-input" type="date"  
+                    class="ny-bg-transparent ny-outline-none ny-border-solid ny-border-ny-dark ny-border ny-rounded-[30px] ny-py-3 ny-px-5" />
+                </div>
+                <div class="ny-flex ny-flex-col ny-mt-5">
+                    <label for="end-date-input" class="ny-py-2">To:</label> 
+                    <input id="end-date-input" type="date"  
+                    class="ny-bg-transparent ny-outline-none ny-border-solid ny-border-ny-dark ny-border ny-rounded-[30px] ny-py-3 ny-px-5 ny-text-white" />
+                </div>
+
             </div>
             <hr class="ny-my-8 ny-border-ny-dark last-of-type:ny-hidden">
         {%endif%}
