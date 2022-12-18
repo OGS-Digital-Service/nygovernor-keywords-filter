@@ -16,7 +16,7 @@ title: Governor Keywords Filter
                 ny-flex-col 
                 lg:ny-flex-row">
         <div class="ny-w-full 
-                    lg:ny-w-[24%] 
+                    lg:ny-w-1/4 
                   ny-bg-black 
                     ny-p-8 
                   ny-text-white">
@@ -49,9 +49,13 @@ title: Governor Keywords Filter
             })  
             }}
         </div>
-        <div class="ny-p-8">
+        <div class="ny-p-8 ny-flex-auto">
             {{keywordcards({
-
+                filtercard: [
+                    {
+                        type: "event"
+                    }
+                ]
             })  
             }}
         </div>

@@ -1,1 +1,19 @@
-<h1> KEYWORD CARDS </h1>
+{% for card in params.filtercard %}
+{% if card.type === "event" %}
+
+<article class="ny-bg-ny-light rounded-30 ny-flex">
+    <div class="ny-flex-none">
+        <img src="https://www.governor.ny.gov/sites/default/files/styles/results/public/thumbnails/image/AlbanyAerial3_hero.jpg?h=fd99c4f7&amp;itok=yfA147fI"            alt="Aerial view of the Empire State Plaza in Albany" class="rounded-30">
+    </div>
+    <div class="ny-flex-auto ny-flex ny-flex-row">
+        <div class="ny-w-[55%]">
+            GOVERNOR
+        </div>
+        <div class="ny-w-[45%]">
+            dec 17 2022
+        </div>
+    </div>
+</article>
+
+{% endif %}
+{% endfor %}
