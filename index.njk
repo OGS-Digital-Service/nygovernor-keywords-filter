@@ -3,53 +3,57 @@ layout: layout.njk
 title: Governor Keywords Filter
 ---
 {% from './_includes/_components.njk' import keywordcards,keywordheader,keywordfilter  %}
-<div class="ny-flex ny-flex-col">
-
-<section class="ny-bg-ny-blue-second ny-p-10">
-    {{keywordheader({
-            keyword: "Coronavirus"
+<div class="ny-flex 
+            ny-flex-col">
+    <section class="ny-bg-ny-blue-second 
+                      ny-p-10">
+        {{keywordheader({
+                keyword: "Coronavirus"
         })  
         }}
-</section>
+    </section>
+    <div class="ny-flex 
+                ny-flex-col 
+                lg:ny-flex-row">
+        <div class="ny-w-full 
+                    lg:ny-w-[24%] 
+                  ny-bg-black 
+                    ny-p-8 
+                  ny-text-white">
+            {{keywordfilter({
+                filter:[
+                    {
+                        name: "filter",
+                        terms: [
+                            {
+                                term: "Press Release"
+                            },
+                            {
+                                term: "Schedule"
+                            },
+                            {
+                                term: "Executive Order"
+                            },
+                            {
+                                term: "Legislation"
+                            }
+                        ]
+                    },
+                    {
+                        name: "refine"
+                    },
+                    {
+                        name: "date range"
+                    }
+                ]
+            })  
+            }}
+        </div>
+        <div class="ny-p-8">
+            {{keywordcards({
 
-<div class="ny-flex ny-flex-col lg:ny-flex-row">
-    <div class="ny-w-full lg:ny-w-[24%] ny-bg-black ny-p-8 ny-text-white">
-        {{keywordfilter({
-            filter:[
-                {
-                    name: "filter",
-                    terms: [
-                        {
-                            term: "Press Release"
-                        },
-                        {
-                            term: "Schedule"
-                        },
-                        {
-                            term: "Executive Order"
-                        },
-                        {
-                            term: "Legislation"
-                        }
-                    ]
-                },
-                {
-                    name: "refine"
-                },
-                {
-                    name: "date range"
-                }
-            ]
-        })  
-        }}
+            })  
+            }}
+        </div>
     </div>
-    <div class="ny-p-8">
-        {{keywordcards({
-
-        })  
-        }}
-
-    </div>
-</div>
-
 </div> 
