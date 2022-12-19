@@ -2,15 +2,25 @@
 {% if card.type === "event" %}
 
 <article class="ny-bg-ny-light rounded-30 ny-flex">
-    <div class="ny-flex-none">
+    <div class="ny-flex ">
         <img src="https://www.governor.ny.gov/sites/default/files/styles/results/public/thumbnails/image/AlbanyAerial3_hero.jpg?h=fd99c4f7&amp;itok=yfA147fI"            alt="Aerial view of the Empire State Plaza in Albany" class="rounded-30">
+        <div class="ny-bg-ny-gold ny-text-black ny-font-extrabold ny-uppercase ny-absolute ny-rounded-[15px] ny-mt-[155px] ny-ml-[155px]">
+            <div class="ny-relative ny-w-[60px] ny-h-[60px] ny-items-center ny-justify-center ny-flex ny-flex-col">
+                <span class="ny-text-[13px]">DEC</span>
+                <span class="ny-text-[24px]">15</span>
+            </div>
+        </div>
     </div>
     <div class="ny-flex-auto ny-flex ny-flex-row">
-        <div class="ny-w-[55%]">
-            GOVERNOR
+        <div class="ny-w-[55%] ">
+            <div class="">Keyword</div>
+            <div class="">Title of the event or schedule</div>
+            <div class="">Description if it was there</div>
         </div>
-        <div class="ny-w-[45%]">
-            dec 17 2022
+        <div class="ny-w-[45%] ny-flex ny-flex-col ny-justify-center">
+            <div class="ny-date">December 15, 2022</div>
+            <div class="ny-time">10:00 AM</div>
+            <div class="ny-location">123 Something Ave, Somewhere, NY 12222</div>
         </div>
     </div>
 </article>
