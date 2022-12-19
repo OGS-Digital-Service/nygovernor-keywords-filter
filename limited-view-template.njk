@@ -5,9 +5,9 @@ title: Style Simple Keywords
 {% from './_includes/_components.njk' import limited %}
 <a id="main-content" tabindex="-1"></a>
 <div class="layout-content">
-    <div class="region region-content">
+    <div class="region region-content ny-flex ny-justify-center"> <!-- EDITED HERE -->
         <div data-drupal-messages-fallback class="hidden"></div>
-        <div class="views-element-container ny-w-5/6 lg:ny-w-2/3 ny-m-auto ny-my-8"> <!-- EDITED HERE -->
+        <div class="views-element-container ny-w-5/6 lg:ny-w-2/3 ny-my-8"> <!-- EDITED HERE -->
             <div class="view view-taxonomy-term view-id-taxonomy_term view-display-id-page_1 js-view-dom-id-3b54a89a08c54e8b1967703a6b43349cb9b19cb06750452e1ddcc9e4b8f4cb27 ">
                 <div class="view-content">
                     {{limited ({ 
@@ -26,9 +26,9 @@ title: Style Simple Keywords
                 </div>
 
 
-                <nav class="pager ny-mt-8" role="navigation" aria-labelledby="pagination-heading">
+                <nav class="pager ny-mt-12 ny-mx-0" role="navigation" aria-labelledby="pagination-heading">
                     <h4 id="pagination-heading" class="visually-hidden">Pagination</h4>
-                    <ul class="pager__items js-pager__items ny-text-[14px]">
+                    <ul class="pager__items js-pager__items ny-text-[14px] ny-px-0">
                         <li class="pager__item pager__item--first">
                             <a href="?page=0" title="Go to first page">
                                 <span class="visually-hidden">First page</span>
