@@ -1,0 +1,18 @@
+news cards:
+event cards:
+- type: "event"
+- month: "MMM"
+- day: "##"
+- longdate: "MMM DD, YYYY"
+- keyword: "whatever all the keywords are"
+- title: "content title"
+- link: "self explanatory"
+- image: "hero or card image media selected to 240px x 240px"
+- imagealt: "alt text for the image from the media"
+- imageplaceholder: "NYGov_Events_Square.png"
+- description: "content type description field for events"
+- location: "full location field"
+legislation cards:
+executive order cards:
+article cards:
+program cards:

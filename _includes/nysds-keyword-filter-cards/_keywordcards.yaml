@@ -1,8 +1,8 @@
 params:
-- name: alert
+- name: type
   type: string
-  required: false
-- name: altertlink
+  required: true
+- name: month
   type: string
   required: false
 - name: alertlinktitle

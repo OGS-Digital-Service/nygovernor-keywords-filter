@@ -25,6 +25,9 @@ module.exports = {
         'ny-gold': '#face00',
         'ny-blue': '#154973',
         'ny-blue-second': '#457AA5'
+      },
+      spacing: {
+        '25': '25px',
       }
     }
   },

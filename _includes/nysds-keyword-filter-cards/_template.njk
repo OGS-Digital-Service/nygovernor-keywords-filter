@@ -1,26 +1,29 @@
 {% for card in params.filtercard %}
 {% if card.type === "event" %}
 
-<article class="ny-bg-ny-light rounded-30 ny-flex">
-    <div class="ny-flex ">
-        <img src="https://www.governor.ny.gov/sites/default/files/styles/results/public/thumbnails/image/AlbanyAerial3_hero.jpg?h=fd99c4f7&amp;itok=yfA147fI"            alt="Aerial view of the Empire State Plaza in Albany" class="rounded-30">
+<article class="ny-bg-ny-light rounded-30 ny-flex md:ny-h-[240px] ny-mt-[30px] ny-border-solid ny-border-ny-mid ny-border">
+    <div class="ny-hidden md:ny-flex">
+        <img src="{% if card.image %}{{card.image}} {% else %} {{card.imageplaceholder}} {% endif %}" 
+             alt="{{card.imagealt}}" 
+             class="rounded-30">
         <div class="ny-bg-ny-gold ny-text-black ny-font-extrabold ny-uppercase ny-absolute ny-rounded-[15px] ny-mt-[155px] ny-ml-[155px]">
-            <div class="ny-relative ny-w-[60px] ny-h-[60px] ny-items-center ny-justify-center ny-flex ny-flex-col">
-                <span class="ny-text-[13px]">DEC</span>
-                <span class="ny-text-[24px]">15</span>
+            <div class="ny-relative ny-w-[60px] ny-h-[60px] ny-items-center ny-justify-center ny-flex ny-flex-col" aria-hidden="true">
+                <span class="ny-text-[13px]">{{card.month}}</span>
+                <span class="ny-text-[24px]">{{card.day}}</span>
             </div>
         </div>
     </div>
-    <div class="ny-flex-auto ny-flex ny-flex-row">
-        <div class="ny-w-[55%] ">
-            <div class="">Keyword</div>
-            <div class="">Title of the event or schedule</div>
-            <div class="">Description if it was there</div>
+    <div class="ny-flex-auto ny-flex ny-flex-col md:ny-flex-row">
+        <div class="ny-w-[55%] ny-pr-5 ny-p-25 ny-pb-0 md:ny-p-25 md:ny-pr-5">
+            <div class="ny-text-[14px]">{{card.keyword}} </div>
+            <div class="ny-border-b-ny-mid ny-border-solid ny-w-8 ny-mt-2 ny-mb-3 ny-border-transparent ny-border" aria-hidden="true"></div>
+            <div class="ny-mb-3"><a class="ny-text-[20px] ny-font-bold ny-no-underline hover:ny-underline focus:ny-underline" href="{{card.link}}">{{card.title}}</a></div>
+            <div class="">{{card.description}}</div>
         </div>
-        <div class="ny-w-[45%] ny-flex ny-flex-col ny-justify-center">
-            <div class="ny-date">December 15, 2022</div>
-            <div class="ny-time">10:00 AM</div>
-            <div class="ny-location">123 Something Ave, Somewhere, NY 12222</div>
+        <div class="ny-w-[45%] ny-flex ny-flex-col ny-justify-center ny-p-25 ny-pt-5 md:ny-pr-25 md:ny-pl-5">
+            <div class="ny-date">{{card.longdate}}</div>
+            <div class="ny-time">{{card.time}}</div>
+            <div class="ny-location">{{card.location}}</div>
         </div>
     </div>
 </article>
