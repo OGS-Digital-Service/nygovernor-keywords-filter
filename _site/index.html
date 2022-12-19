@@ -199,7 +199,8 @@
           type="button">
           Filter Options
   </button>
-  <i class="fas fa-chevron-down ny-mr-4"></i>
+  <i class="fas fa-chevron-down ny-mr-4" aria-hidden="true"></i>
+  <i class="fas fa-chevron-up ny-mr-4 !ny-hidden" aria-hidden="true"></i>
 </div>
 <div class="ny-hidden lg:ny-block">
     
@@ -312,14 +313,25 @@
     <div class="ny-flex-auto ny-flex ny-flex-col md:ny-flex-row">
         <div class="ny-w-[55%] ny-pr-5 ny-p-25 ny-pb-0 md:ny-p-25 md:ny-pr-5">
             <div class="ny-text-[14px]">Governor </div>
-            <div class="ny-border-b-ny-mid ny-border-solid ny-w-8 ny-mt-2 ny-mb-3 ny-border-transparent ny-border" aria-hidden="true"></div>
-            <div class="ny-mb-3"><a class="ny-text-[20px] ny-font-bold ny-no-underline hover:ny-underline focus:ny-underline" href="https://www.governor.ny.gov/schedule/governor-hochul-new-york-city-159">Governor Hochl is in New York City</a></div>
-            <div class="">not usually here</div>
+            <div class="ny-border-b-ny-mid ny-border-solid ny-w-8 ny-mt-2 ny-mb-3 ny-border-0 ny-border-b" aria-hidden="true"></div>
+            <div class="ny-mb-3"><a class="ny-text-[20px] ny-font-bold ny-no-underline hover:ny-underline focus:ny-underline" href="https://www.governor.ny.gov/schedule/governor-hochul-new-york-city-159">Governor Hochul is in New York City</a></div>
+            
         </div>
-        <div class="ny-w-[45%] ny-flex ny-flex-col ny-justify-center ny-p-25 ny-pt-5 md:ny-pr-25 md:ny-pl-5">
-            <div class="ny-date">Dec 15, 2022</div>
-            <div class="ny-time">10:00 AM</div>
-            <div class="ny-location">875 Erskine Street, Brooklyn, NY 11239</div>
+        <div class="ny-w-[45%] ny-flex ny-flex-col ny-justify-center ny-p-25 ny-pt-5 md:ny-pr-25 md:ny-pl-5 ny-border-l ny-border-ny-mid ny-border-solid ny-border-0">
+            <div class="ny-inline-flex ny-pb-4 ny-border-b-ny-mid ny-border-solid ny-border-0 ny-border-b last-of-type:ny-border-b-0">
+                <i class="fas fa-calendar-alt ny-text-ny-blue ny-mr-4" aria-hidden="true"></i>
+                <div class="ny-font-bold ny-text-[14px]">Dec 15, 2022</div>
+            </div>
+            <div class="ny-inline-flex ny-py-4 ny-border-b-ny-mid ny-border-solid ny-border-0 ny-border-b last-of-type:ny-border-b-0">
+                <i class="fas fa-clock ny-text-ny-blue ny-mr-4" aria-hidden="true"></i>
+                <div class="ny-text-[14px]">10:00 AM</div>
+            </div>
+            
+            <div class="ny-inline-flex ny-pt-4 ny-border-b-ny-mid ny-border-solid ny-border-0 ny-border-b last-of-type:ny-border-b-0">
+                <i class="fas fa-map-marker-alt ny-text-ny-blue ny-mr-4" aria-hidden="true"></i>
+                <div class="ny-text-[14px]">875 Erskine Street, Brooklyn, NY 11239</div>
+            </div>
+            
         </div>
     </div>
 </article>

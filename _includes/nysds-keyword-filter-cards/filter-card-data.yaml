@@ -4,6 +4,7 @@ event cards:
 - month: "MMM"
 - day: "##"
 - longdate: "MMM DD, YYYY"
+- time: "HH:HH XM"
 - keyword: "whatever all the keywords are"
 - title: "content title"
 - link: "self explanatory"

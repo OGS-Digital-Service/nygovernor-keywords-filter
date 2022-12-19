@@ -16,14 +16,27 @@
     <div class="ny-flex-auto ny-flex ny-flex-col md:ny-flex-row">
         <div class="ny-w-[55%] ny-pr-5 ny-p-25 ny-pb-0 md:ny-p-25 md:ny-pr-5">
             <div class="ny-text-[14px]">{{card.keyword}} </div>
-            <div class="ny-border-b-ny-mid ny-border-solid ny-w-8 ny-mt-2 ny-mb-3 ny-border-transparent ny-border" aria-hidden="true"></div>
+            <div class="ny-border-b-ny-mid ny-border-solid ny-w-8 ny-mt-2 ny-mb-3 ny-border-0 ny-border-b" aria-hidden="true"></div>
             <div class="ny-mb-3"><a class="ny-text-[20px] ny-font-bold ny-no-underline hover:ny-underline focus:ny-underline" href="{{card.link}}">{{card.title}}</a></div>
+            {% if card.description %}
             <div class="">{{card.description}}</div>
+            {% endif %}
         </div>
-        <div class="ny-w-[45%] ny-flex ny-flex-col ny-justify-center ny-p-25 ny-pt-5 md:ny-pr-25 md:ny-pl-5">
-            <div class="ny-date">{{card.longdate}}</div>
-            <div class="ny-time">{{card.time}}</div>
-            <div class="ny-location">{{card.location}}</div>
+        <div class="ny-w-[45%] ny-flex ny-flex-col ny-justify-center ny-p-25 ny-pt-5 md:ny-pr-25 md:ny-pl-5 ny-border-l ny-border-ny-mid ny-border-solid ny-border-0">
+            <div class="ny-inline-flex ny-pb-4 ny-border-b-ny-mid ny-border-solid ny-border-0 ny-border-b last-of-type:ny-border-b-0">
+                <i class="fas fa-calendar-alt ny-text-ny-blue ny-mr-4" aria-hidden="true"></i>
+                <div class="ny-font-bold ny-text-[14px]">{{card.longdate}}</div>
+            </div>
+            <div class="ny-inline-flex ny-py-4 ny-border-b-ny-mid ny-border-solid ny-border-0 ny-border-b last-of-type:ny-border-b-0">
+                <i class="fas fa-clock ny-text-ny-blue ny-mr-4" aria-hidden="true"></i>
+                <div class="ny-text-[14px]">{{card.time}}</div>
+            </div>
+            {% if card.location %}
+            <div class="ny-inline-flex ny-pt-4 ny-border-b-ny-mid ny-border-solid ny-border-0 ny-border-b last-of-type:ny-border-b-0">
+                <i class="fas fa-map-marker-alt ny-text-ny-blue ny-mr-4" aria-hidden="true"></i>
+                <div class="ny-text-[14px]">{{card.location}}</div>
+            </div>
+            {% endif %}
         </div>
     </div>
 </article>
