@@ -1,0 +1,38 @@
+{% for card in params.cards %}
+    <div class="views-row ny-bg-ny-light ny-rounded-[30px] ny-p-8 ny-border-ny-mid ny-border-solid">
+            <div class="views-field views-field-type">
+                <span class="field-content ny-text-[14px]">
+                    {{card.type}}
+                </span>
+            </div>
+                <div class="ny-border-b-ny-mid ny-border-solid ny-w-8 ny-mt-2 ny-mb-3 ny-border-0 ny-border-b" aria-hidden="true"></div>
+            <div class="views-field views-field-title">
+                <h2 class="field-content">
+                    <a class="ny-line-clamp-2 ny-text-[18px] lg:ny-text-[20px] ny-font-bold ny-no-underline hover:ny-underline focus:ny-underline" href="{{card.link}}" hreflang="en">
+                        {{card.title}}
+                    </a>
+                </h2>
+            </div>
+        {% if card.date %}
+            <div class="views-field views-field-field-se-date-range">
+                <div class="field-content"><time datetime="???" class="datetime ny-text-[13px] ny-mt-1">{{card.date}}</time></div>
+            </div>
+        {% endif %}
+            <div class="views-field views-field-field-se-description">
+                <div class="field-content">
+                    <p>{{card.description}}</p>
+                </div>
+            </div>
+
+                <!-- all the unused ones-->
+                <div class="views-field views-field-field-s-description"><div class="field-content"></div></div>
+                <div class="views-field views-field-field-p-description"><div class="field-content"></div></div>
+                <div class="views-field views-field-field-n-description"><div class="field-content"></div></div>
+                <div class="views-field views-field-field-lp-description"><div class="field-content"></div></div>
+                <div class="views-field views-field-field-l-description"><div class="field-content"></div></div>
+                <div class="views-field views-field-field-gp-description"><div class="field-content"></div></div>
+                <div class="views-field views-field-field-e-description"><div class="field-content"></div></div>
+                <div class="views-field views-field-field-ap-description"><div class="field-content"></div></div>
+    
+    </div>
+{% endfor %}

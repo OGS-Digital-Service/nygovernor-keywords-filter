@@ -1,11 +1,12 @@
 {% for card in params.filtercard %}
 
+
 {% if card.type === "event" %}  <!-- EVENT CARDS *************** -->
     <article class="ny-bg-ny-light rounded-30 ny-flex md:ny-h-[240px] ny-mt-[30px] ny-border-solid ny-border-ny-mid ny-border">
         <div class="ny-hidden md:ny-flex">
             <img src="{% if card.image %}{{card.image}} {% else %} {{card.imageplaceholder}} {% endif %}" 
                 alt="{{card.imagealt}}" 
-                class="rounded-30">
+                class="rounded-30 ny-h-[240px] ny-w-[240px]">
             <div class="ny-bg-ny-gold ny-text-black ny-font-extrabold ny-uppercase ny-absolute ny-rounded-[15px] ny-mt-[155px] ny-ml-[155px]">
                 <div class="ny-relative ny-w-[60px] ny-h-[60px] ny-items-center ny-justify-center ny-flex ny-flex-col" aria-hidden="true">
                     <span class="ny-text-[13px]">{{card.month}}</span>
@@ -50,12 +51,13 @@
     </article>
 {% endif %}
 
+
 {% if card.type === "news" %}  <!-- NEWS CARDS *************** -->
     <article class="ny-bg-ny-light rounded-30 ny-flex md:ny-h-[240px] ny-mt-[30px] ny-border-solid ny-border-ny-mid ny-border">
         <div class="ny-hidden md:ny-flex">
             <img src="{% if card.image %}{{card.image}} {% else %} {{card.imageplaceholder}} {% endif %}" 
                 alt="{{card.imagealt}}" 
-                class="rounded-30">
+                class="rounded-30 ny-h-[240px] ny-w-[240px]">
         </div>
         <div class="ny-flex-auto ny-flex ny-flex-col md:ny-flex-row">
             <div class="ny-pr-5 ny-p-25 md:ny-p-25 md:ny-pr-5">
@@ -68,7 +70,65 @@
                 </div>
                 <div class="ny-text-[13px] ny-mt-1">
                     <span class="ny-font-extrabold ">{{card.longdate}}</span><span class=""> | {{card.time}} EST</span>
-                    </div>
+                </div>
+                {% if card.description %}
+                <div class="ny-mt-4">
+                    <p class="ny-line-clamp-3 ny-m-0">
+                        {{card.description}}
+                    </p>
+                </div>
+                {% endif %}
+            </div> 
+        </div>
+    </article>
+{% endif %}
+
+
+{% if card.type === "program" %}  <!-- PROGRAM CARDS *************** -->
+    <article class="ny-bg-ny-light rounded-30 ny-flex md:ny-h-[240px] ny-mt-[30px] ny-border-solid ny-border-ny-mid ny-border">
+        <div class="ny-hidden md:ny-flex">
+            <img src="{% if card.image %}{{card.image}} {% else %} {{card.imageplaceholder}} {% endif %}" 
+                alt="{{card.imagealt}}" 
+                class="rounded-30 ny-h-[240px] ny-w-[240px]">
+        </div>
+        <div class="ny-flex-auto ny-flex ny-flex-col md:ny-flex-row">
+            <div class="ny-pr-5 ny-p-25 md:ny-p-25 md:ny-pr-5">
+                <div class="ny-text-[14px]">{{card.keyword}} </div>
+                <div class="ny-border-b-ny-mid ny-border-solid ny-w-8 ny-mt-2 ny-mb-3 ny-border-0 ny-border-b" aria-hidden="true"></div>
+                <div class="ny-mb-3">
+                    <a class="ny-line-clamp-2 ny-text-[18px] lg:ny-text-[20px] ny-font-bold ny-no-underline hover:ny-underline focus:ny-underline" href="{{card.link}}">
+                    {{card.title}}
+                    </a>
+                </div>
+                {% if card.description %}
+                <div class="ny-mt-4">
+                    <p class="ny-line-clamp-3 ny-m-0">
+                        {{card.description}}
+                    </p>
+                </div>
+                {% endif %}
+            </div> 
+        </div>
+    </article>
+{% endif %}
+
+
+{% if card.type === "article" %}  <!-- ARTICLE CARDS *************** -->
+    <article class="ny-bg-ny-light rounded-30 ny-flex md:ny-h-[240px] ny-mt-[30px] ny-border-solid ny-border-ny-mid ny-border">
+        <div class="ny-hidden md:ny-flex">
+            <img src="{% if card.image %}{{card.image}} {% else %} {{card.imageplaceholder}} {% endif %}" 
+                alt="{{card.imagealt}}" 
+                class="rounded-30 ny-h-[240px] ny-w-[240px]">
+        </div>
+        <div class="ny-flex-auto ny-flex ny-flex-col md:ny-flex-row">
+            <div class="ny-pr-5 ny-p-25 md:ny-p-25 md:ny-pr-5">
+                <div class="ny-text-[14px]">{{card.keyword}} </div>
+                <div class="ny-border-b-ny-mid ny-border-solid ny-w-8 ny-mt-2 ny-mb-3 ny-border-0 ny-border-b" aria-hidden="true"></div>
+                <div class="ny-mb-3">
+                    <a class="ny-line-clamp-2 ny-text-[18px] lg:ny-text-[20px] ny-font-bold ny-no-underline hover:ny-underline focus:ny-underline" href="{{card.link}}">
+                    {{card.title}}
+                    </a>
+                </div>
                 {% if card.description %}
                 <div class="ny-mt-4">
                     <p class="ny-line-clamp-3 ny-m-0">

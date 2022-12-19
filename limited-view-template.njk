@@ -1,0 +1,72 @@
+---
+layout: layout.njk
+title: Style Simple Keywords
+---
+{% from './_includes/_components.njk' import limited %}
+<a id="main-content" tabindex="-1"></a>
+<div class="layout-content">
+    <div class="region region-content">
+        <div data-drupal-messages-fallback class="hidden"></div>
+        <div class="views-element-container ny-w-5/6 lg:ny-w-2/3 ny-m-auto ny-my-8"> <!-- EDITED HERE -->
+            <div class="view view-taxonomy-term view-id-taxonomy_term view-display-id-page_1 js-view-dom-id-3b54a89a08c54e8b1967703a6b43349cb9b19cb06750452e1ddcc9e4b8f4cb27 ">
+                <div class="view-content">
+                    {{limited ({ 
+                        cards: [
+                            {
+                                type: "News",
+                                keyword: "News",
+                                title:"Governor Hochul Announces Nearly $7.9 Million to Help New York Farms Address Impacts of Climate Change",
+                                description:"Governor Hochul announced nearly $7.9 million is being awarded through the Climate Resilient Farming Grant Program to help over 70 farms across the state reduce their environmental footprints and",
+                                date:"",
+                                link:"https://nygovernord8dev.prod.acquia-sites.com/news/governor-hochul-announces-nearly-79-million-help-new-york-farms-address-impacts-climate-change"
+                            }
+                        ]
+                    })  
+                    }}
+                </div>
+
+                <nav class="pager" role="navigation" aria-labelledby="pagination-heading">
+                    <h4 id="pagination-heading" class="visually-hidden">Pagination</h4>
+                    <ul class="pager__items js-pager__items">
+                        <li class="pager__item is-active">
+                            <a href="?page=0" title="Current page">
+                                <span class="visually-hidden">
+                                    Current page
+                                </span>
+                                1
+                            </a>
+                        </li>
+                        <li class="pager__item">
+                            <a href="?page=1" title="Go to page 2">
+                                <span class="visually-hidden">
+                                    Page
+                                </span>
+                                2
+                            </a>
+                        </li>
+                        <li class="pager__item">
+                            <a href="?page=2" title="Go to page 3">
+                                <span class="visually-hidden">
+                                    Page
+                                </span>
+                                3
+                            </a>
+                        </li>
+                        <li class="pager__item pager__item--next">
+                            <a href="?page=1" title="Go to next page" rel="next">
+                                <span class="visually-hidden">Next page</span>
+                                <span aria-hidden="true">››</span>
+                            </a>
+                        </li>
+                        <li class="pager__item pager__item--last">
+                            <a href="?page=2" title="Go to last page">
+                                <span class="visually-hidden">Last page</span>
+                                <span aria-hidden="true">Last »</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
