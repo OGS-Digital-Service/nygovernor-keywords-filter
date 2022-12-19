@@ -58,7 +58,7 @@
                 class="rounded-30">
         </div>
         <div class="ny-flex-auto ny-flex ny-flex-col md:ny-flex-row">
-            <div class="ny-pr-5 ny-p-25 ny-pb-0 md:ny-p-25 md:ny-pr-5">
+            <div class="ny-pr-5 ny-p-25 md:ny-p-25 md:ny-pr-5">
                 <div class="ny-text-[14px]">{{card.keyword}} </div>
                 <div class="ny-border-b-ny-mid ny-border-solid ny-w-8 ny-mt-2 ny-mb-3 ny-border-0 ny-border-b" aria-hidden="true"></div>
                 <div class="ny-mb-3">
@@ -66,6 +66,9 @@
                     {{card.title}}
                     </a>
                 </div>
+                <div class="ny-text-[13px] ny-mt-1">
+                    <span class="ny-font-extrabold ">{{card.longdate}}</span><span class=""> | {{card.time}} EST</span>
+                    </div>
                 {% if card.description %}
                 <div class="ny-mt-4">
                     <p class="ny-line-clamp-3 ny-m-0">
