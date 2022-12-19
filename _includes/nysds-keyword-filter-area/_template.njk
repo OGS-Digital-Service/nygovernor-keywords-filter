@@ -1,4 +1,12 @@
-<div class="">
+<div class="ny-flex lg:ny-hidden ny-w-full ny-flex-auto ny-justify-between ny-items-center">
+  <button class="ny-flex-auto ny-p-8 ny-text-left ny-font-bold ny-bg-transparent ny-border-none  hover:ny-text-ny-gold focus:ny-text-ny-gold focus:!ny-outline-white" 
+          id="ny-keywords-select" 
+          type="button">
+          Filter Options
+  </button>
+  <i class="fas fa-chevron-down ny-mr-4"></i>
+</div>
+<div class="ny-hidden lg:ny-block">
     {% for filteritem in params.filter %}
         {% if filteritem.name === "filter" %}
             <div class="ny-flex ny-flex-col">
