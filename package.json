@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start":"eleventy --serve & npx tailwindcss -i tailwind-setup.css -o css/nysds-gov.css --minify --watch"
+    "start":"eleventy --serve & npx tailwindcss -i tailwind-setup.css -o css/nysds-gov.css --minify --watch",
+    "startkeyword":"eleventy --serve & npx tailwindcss -i tailwind-setup.css -o css/nysds-keywords.css --minify --watch"
   },
   "repository": {
     "type": "git",

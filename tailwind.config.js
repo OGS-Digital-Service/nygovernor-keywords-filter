@@ -1,8 +1,7 @@
 module.exports = {
   prefix: 'ny-',
   content: [
-     '_site/*.html',
-    '_site/**/*.html'  
+     '_site/limited-view-template/index.html'  
   ],
   theme: {
     fontFamily: {

@@ -1,0 +1,164 @@
+{#
+/**
+ * @file
+ * Theme override to display a view of unformatted rows.
+ *
+ * Available variables:
+ * - title: The title of this group of rows. May be empty.
+ * - rows: A list of the view's row items.
+ *   - attributes: The row's HTML attributes.
+ *   - content: The row's content.
+ * - view: The view object.
+ * - default_row_class: A flag indicating whether default classes should be
+ *   used on rows.
+ *
+ * @see template_preprocess_views_view_unformatted()
+ */
+
+
+
+
+
+
+ ***************NYS NOTE - we need the actual field names for the fields listed below:
+ - title
+ - description: All the descriptions for different content types appear to have different fields. We need each one in here.
+ - date (news items)
+ - type (content type)
+ - url (link url to node content)
+
+
+
+
+#}
+
+<section class="ny-bg-ny-blue-second ny-p-10 ny-w-full">
+    <h2 class="ny-flex ny-flex-col ny-items-center ny-m-0 ny-text-center view-title">
+            <span class="text-oswald ny-uppercase ny-text-base ny-tracking-[2px]">
+                Keyword
+            </span>
+            <span class="ny-text-5xl ny-mt-[10px] ny-text-white ny-font-extrabold">
+                {{ keywords_listing_page_term_name }} 
+            </span>
+    </h2>
+</section>
+
+{% for row in rows %}
+  {%
+    set row_classes = [
+      default_row_class ? 'views-row',
+    ]
+  %}
+    <div {{ row.attributes.addClass(row_classes) }} class="ny-bg-ny-light ny-rounded-[30px] ny-p-8 ny-border-ny-mid ny-border-solid ny-border ny-my-8">
+
+            {{- row.content -}} /* no idea - does this need this? is this where the template should load? */
+
+                    <div class="views-field views-field-type">
+                        <span class="field-content ny-text-[14px]">
+                            {{row.type}} <--- /* NEED ACTUAL content type field */
+                        </span>
+                    </div>
+                        <div class="ny-border-b-ny-mid ny-border-solid ny-w-8 ny-mt-2 ny-mb-3 ny-border-0 ny-border-b" aria-hidden="true"></div>
+                    <div class="views-field views-field-title">
+                        <h2 class="field-content">
+                            <a class="ny-line-clamp-2 ny-text-[18px] lg:ny-text-[20px] ny-font-bold ny-no-underline hover:ny-underline focus:ny-underline" 
+                                href="{{row.url}}" hreflang="en"> <---- /* NEED ACTUAL content type url field */
+                                {{row.title}} <---- /* NEED ACTUAL content type title field */
+                            </a>
+                        </h2>
+                    </div>
+
+                {% if row.news_date %} <---- /* NEED ACTUAL news content type date field  */
+                    <div class="views-field views-field-field-??????"> /* not sure what this class would be called for the news date */
+                        <div class="field-content">
+                            <time datetime="YYYY-MM-DDThh:mmTZD" class="datetime ny-text-[13px] ny-mt-1 ny-font-bold">
+                                {{row.news_date}} <---- /* NEED ACTUAL news content type date field  */
+                            </time>
+                        </div>
+                    </div>
+                {% endif %} 
+
+                {% if row.scheduled_event_date %} <---- /* NEED ACTUAL scheduled event start date field  */
+                    <div class="views-field views-field-field-se-date-range">
+                        <div class="field-content">
+                            <time datetime="YYYY-MM-DDThh:mmTZD" class="datetime ny-text-[13px] ny-mt-1 ny-font-bold">
+                                {{row.scheduled_event_date}} <---- /* NEED ACTUAL scheduled event start date field  */
+                            </time> 
+                        </div>
+                    </div>
+                {% endif %} 
+
+                {% if row.se_description %} <---- /* NEED ACTUAL se description field */
+                    <div class="views-field views-field-field-se-description"> 
+                        <div class="field-content">
+                            <p class="ny-line-clamp-3">{{row.se_description}}</p> <---- /* NEED ACTUAL description field */
+                        </div>
+                    </div>
+                {% endif %}  
+
+                {% if row.s_description %} <---- /* NEED ACTUAL s description field */
+                    <div class="views-field views-field-field-s-description"> 
+                        <div class="field-content">
+                            <p class="ny-line-clamp-3">{{row.s_description}}</p> <---- /* NEED ACTUAL description field */
+                        </div>
+                    </div>
+                {% endif %}   
+
+                {% if row.p_description %} <---- /* NEED ACTUAL p description field */
+                    <div class="views-field views-field-field-p-description"> 
+                        <div class="field-content">
+                            <p class="ny-line-clamp-3">{{row.p_description}}</p> <---- /* NEED ACTUAL description field */
+                        </div>
+                    </div>
+                {% endif %} 
+
+                {% if row.n_description %} <---- /* NEED ACTUAL n description field */
+                    <div class="views-field views-field-field-n-description"> 
+                        <div class="field-content">
+                            <p class="ny-line-clamp-3">{{row.n_description}}</p> <---- /* NEED ACTUAL description field */
+                        </div>
+                    </div>
+                {% endif %} 
+
+                {% if row.lp_description %} <---- /* NEED ACTUAL lp description field */
+                    <div class="views-field views-field-field-lp-description"> 
+                        <div class="field-content">
+                            <p class="ny-line-clamp-3">{{row.lp_description}}</p> <---- /* NEED ACTUAL description field */
+                        </div>
+                    </div>
+                {% endif %} 
+
+                {% if row.l_description %} <---- /* NEED ACTUAL l description field */
+                    <div class="views-field views-field-field-l-description"> 
+                        <div class="field-content">
+                            <p class="ny-line-clamp-3">{{row.l_description}}</p> <---- /* NEED ACTUAL description field */
+                        </div>
+                    </div>
+                {% endif %} 
+
+                {% if row.gp_description %} <---- /* NEED ACTUAL gp description field */
+                    <div class="views-field views-field-field-gp-description"> 
+                        <div class="field-content">
+                            <p class="ny-line-clamp-3">{{row.gp_description}}</p> <---- /* NEED ACTUAL description field */
+                        </div>
+                    </div>
+                {% endif %} 
+
+                {% if row.e_description %} <---- /* NEED ACTUAL e description field */
+                    <div class="views-field views-field-field-e-description"> 
+                        <div class="field-content">
+                            <p class="ny-line-clamp-3">{{row.e_description}}</p> <---- /* NEED ACTUAL description field */
+                        </div>
+                    </div>
+                {% endif %} 
+
+                {% if row.ap_description %} <---- /* NEED ACTUAL ap description field */
+                    <div class="views-field views-field-field-ap-description"> 
+                        <div class="field-content">
+                            <p class="ny-line-clamp-3">{{row.ap_description}}</p> <---- /* NEED ACTUAL description field */
+                        </div>
+                    </div>
+                {% endif %} 
+            
+    </div>
+{% endfor %}
