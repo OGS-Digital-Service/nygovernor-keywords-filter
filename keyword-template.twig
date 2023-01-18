@@ -20,12 +20,14 @@
 
 
 
- ***************NYS NOTE - we need the actual field names for the fields listed below:
+ ********************************************************NYS NOTE - we need the actual field names for the fields listed below:
  - title
  - description: All the descriptions for different content types appear to have different fields. We need each one in here.
- - date (news items)
+ - date (news content type)
+ - event start date (event content type)
  - type (content type)
  - url (link url to node content)
+ - visual page at https://frabjous-manatee-e2cddd.netlify.app/limited-view-template/ 
 
 
 
@@ -51,7 +53,7 @@
   %}
     <div {{ row.attributes.addClass(row_classes) }} class="ny-bg-ny-light ny-rounded-[30px] ny-p-8 ny-border-ny-mid ny-border-solid ny-border ny-my-8">
 
-            {{- row.content -}} /* no idea - does this need this? is this where the template should load? */
+            {{- row.content -}} /* no idea - does this need this? */
 
                     <div class="views-field views-field-type">
                         <span class="field-content ny-text-[14px]">
